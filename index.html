@@ -1,22 +1,67 @@
+<!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   Wadap?
-  </title>
- </head>
- <body>
-  <h1>Great success!
-  </h1>
-  <a href="index.html">
-   Home
-  </a>
-  <a href="content\5.html">
-   5
-  </a>
-  <a href="content\6.html">
-   6
-  </a>
- </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wadap?</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link href="./css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- musat, prkl ei saanu automaagisesti-->
+    <button onclick="document.getElementById('bg-audio').play()">Soita taustamusiikki</button>
+
+    <audio id="bg-audio" loop>
+        <source src="./sound/Epatyo.mp3" type="audio/mpeg">
+    </audio> -->
+
+    <section id="hero" class="gradient-background">
+        <div class="px-4 py-5 my-5 text-center"> <img class="d-block mx-auto mb-4 profile-img" src="./images/meitti.png"
+                alt="me" height="200"> <!-- width="72" height="57"> -->
+            <h1 class="display-5 fw-bold text-body-emphasis">Hero for a day</h1>
+            <div class="col-lg-6 mx-auto">
+                <p class="lead mb-4">fool for a lifetime.</p>
+                <!--<div class="d-grid gap-2 d-sm-flex justify-content-sm-center"> <button type="button"
+                        class="btn btn-primary btn-lg px-4 gap-3">Primary button</button> <button type="button"
+                        class="btn btn-outline-secondary btn-lg px-4">Secondary</button> </div> -->
+            </div>
+        </div>
+    </section>
+
+    <section id="resume">
+        <div class="container mt-5">
+            <h2 class="display-5 fw-bold text-body-emphasis">Resume</h1>
+                <a class="lead mb-4" href="https://www.linkedin.com/in/haminen/">linkedin.com/in/haminen</a>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section id="footer" class="gradient-background">
+        <div class="container">
+            <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 mt-5">
+                <div class="col mb-3">
+                    <p class="text-body-secondary">©Häminen productions</p>
+                </div>
+                <div class="col mb-3"></div>
+                <div class="col mb-3">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="https://www.ampparit.com/" class="nav-link p-0 text-body-secondary">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+                    </ul>
+                </div>
+
+            </footer>
+        </div>
+
+    </section>
+
+</body>
+
 </html>
