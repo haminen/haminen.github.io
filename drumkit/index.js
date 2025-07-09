@@ -36,6 +36,19 @@ function playSound(s){
 
 }
 
+function buttonAnimation(currentKey){
+    
+    //lisätään nappulalle uusi tyyliluokka ja poistetaan se odottelun jälkeen jolloin saadaan luotua efekti että painetti
+    var activeButton = document.querySelector("."+currentKey); // valitaan nappula jota muutetaan
+
+    activeButton.classList.toggle("pressed");
+    
+    setTimeout(function(){
+        activeButton.classList.toggle("pressed");
+    },100);
+    
+}
+
 //lasketaan rumpunappulat
 var numbOfDrumButtons = document.querySelectorAll(".drum").length;
 
@@ -46,7 +59,9 @@ for (var i=0; i < numbOfDrumButtons; i++) {
 
         var buttonTextContent = this.textContent;
 
-            playSound(buttonTextContent);
+        playSound(buttonTextContent);
+
+        buttonAnimation(buttonTextContent);
 
     });
 
@@ -57,5 +72,6 @@ document.addEventListener("keypress",function(event){
 
     var pressedKey = event.key;
     playSound(pressedKey);
+    buttonAnimation(pressedKey)
 
 });
